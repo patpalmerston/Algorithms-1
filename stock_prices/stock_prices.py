@@ -8,7 +8,7 @@ import argparse
 def find_max_profit(prices):
     result = []
     for i in range(len(prices)):
-        for j in range(1, len(prices)):
+        for j in range(i+1, len(prices)):
             temp = prices[j] - prices[i]
             print(prices[i], prices[j], temp)
             result.append(temp)

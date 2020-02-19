@@ -1,10 +1,15 @@
 #!/usr/bin/python
 
+# import functools
 import sys
+# from functools import lru_cache
+# @lru_cache(maxsize=1000)
 
 # The cache parameter is here for if you want to implement
 # a solution that is more efficient than the naive
 # recursive solution
+
+# reference material for recursion https://dev.to/teosoft7/how-to-implement-fibonacci-sequence-with-python-4cfo
 
 
 def eating_cookies(n, cache=None):
