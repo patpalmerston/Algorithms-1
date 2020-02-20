@@ -4,20 +4,28 @@ import math
 
 
 def recipe_batches(recipe, ingredients):
+  # store results
     batches = []
+    # loop through the ingredients
     for i in ingredients:
+        # loop through the recipe
         for j in recipe:
+            # check to see if our ingredients have everything the recipe needs
             if j not in ingredients:
+                # if not retur zero
                 return 0
             if j == i:
-                print(j, recipe[j], i, ingredients[i])
+                # if the ingredients and recipe keys match then check to see if the recipe needs are greater than available ingredients
                 if recipe[j] > ingredients[i]:
+                  # if recipe needs more than available return zero
                     return 0
+                  # else take the ingredients and divide them by the amount needed in the recipe
                 else:
+                  # store them in a variable
                     value = ingredients[i] // recipe[j]
-                    # print(math.floor(value))
+                    # append them to the empty list and round down
                     batches.append(math.floor(value))
-
+    # return the min number in the list as that will be the max number of batches available
     return min(batches)
 
 
