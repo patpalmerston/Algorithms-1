@@ -26,7 +26,7 @@ def making_change(amount, denominations=[1, 5, 10, 25, 50]):
             # giving each loop that is able complete this task a value of 1 in the cache index
             # when we hit cache[11] and minus the coin of '1', we return the value of amount and restart the loop
 
-            print(cache, cache[amount])
+            # print(cache, cache[amount])
             # print('cache amount', cache[amount])
 
     # this counts how many times the loop was able to generate the value of amount
